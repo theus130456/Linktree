@@ -1,11 +1,58 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
-
-
-
-
+    text-decoration: none;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.app {
+    display: flex;/*deixa um item do lado do outro*/
+    flex-direction: column;
+    gap: 72px;/*espaçamento entre os itens */
+
+    & .perfil {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+        align-items: center;
+
+        & img {
+            width: 250px;
+            height: 250px;
+            border-radius: 100%;
+            object-fit: cover;
+        }
+    }
+
+    & .btns {
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+
+        & a {
+            background-color: rgb(177, 19, 209);
+            padding: 20px;
+            border-radius: 100px;
+            color: #fff;
+            text-align: center;
+            font-size: 24px;
+            border: 1px solid black;
+            box-shadow: 4px px 0 black;
+            transition: .3s;
+        }
+
+        & a:hover {
+            transform: translateX(4px) translateY(4px);
+            box-shadow: none;
+        }
+    }
+}
